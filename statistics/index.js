@@ -9,7 +9,7 @@ module.exports = class Statistics {
     showAchievements(userName,callback) {
     	User.findOne({ 'userName': userName}, function (err, user) {
             console.log(user);
-  			if (err) return handleError(err);
+  			if (err || (user == null)) callback({});
   			//contain win count. 
   			var userWin = user.wins;
   			//contain losses count.
