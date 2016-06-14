@@ -16,7 +16,8 @@ var _eventID;
 function getEventId(callback) {
     Event.findOne({}).sort('-eventId').exec( function(err, doc) {
         if (err) throw err;
-        callback(doc.eventId);
+        if(doc == null) callback(0);
+        else callback(doc.eventId);
     });
 }
 

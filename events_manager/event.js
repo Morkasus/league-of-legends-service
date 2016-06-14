@@ -10,7 +10,7 @@ var eventSchema = new Schema({
     players: [String],
     hide: {type: Boolean, required:true},
     started: {type: Boolean, required:true}
-}, {collection: 'event'});
+}, {collection: 'events’});
 
 var Event = mongoose.model('Event', eventSchema);
 module.exports = Event;
