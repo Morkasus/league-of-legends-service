@@ -6,7 +6,7 @@ var gameSchema = new Schema({
 	loseScore: {type: Number, required:true}, 
     winTeam: [String],
     loseTeam: [String],
-}, {collection: 'games’});
+}, {collection: 'games'});
 
 var Game = mongoose.model('Game', gameSchema);
 module.exports = Game;

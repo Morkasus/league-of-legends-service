@@ -13,7 +13,7 @@ var userSchema = new Schema({
     teamImg: {type: String, required:true},
     isAdmin: {type: Boolean, required:true},
     games: [{type: Number, unique:true}]
-}, {collection: 'users’});
+}, {collection: 'users'});
 
 var User = mongoose.model('User', userSchema);
 module.exports = User;

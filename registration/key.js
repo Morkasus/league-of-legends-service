@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var keySchema = new Schema({
 	key: {type:String, index:1, required:true, unique:true},
-}, {collection: 'keys’});
+}, {collection: 'keys'});
 
-var Key = mongoose.model('Key', keySchema);
+var Key = mongoose.model('Keys', keySchema);
 module.exports = Key;
